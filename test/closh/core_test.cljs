@@ -407,7 +407,14 @@
     (str "(sh echo x3 > \"" f "\") (sh echo y1 >> \"" f "\")")
 
     ""
-    (str "echo x4 2 > " f)))
+    (str "echo x4 2 > " f)
+
+    "HELLO\n"
+    (str "echo hello | (clojure.string/upper-case) > " f)
+
+    "H\n"
+    (str "echo hello | (first) | (clojure.string/upper-case) > " f)))
+
 
 (when (not= js/process.env.NODE_ENV "development")
   (deftest run-special-cases
