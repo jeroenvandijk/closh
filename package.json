@@ -22,7 +22,7 @@
     "pkg-lumo": "1.0.2"
   },
   "engines": {
-    "node": "9.x"
+    "node": "10.x"
   },
   "scripts": {
     "start": "./bin/closh.sh",
