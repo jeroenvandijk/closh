@@ -1,4 +1,4 @@
-(ns closh.zero.frontend.rebel-readline
+(ns closh.zero.frontend.rebel
   (:gen-class)
   (:require [rebel-readline.clojure.main :refer [syntax-highlight-prn]]
             [rebel-readline.core :as core]
@@ -12,7 +12,7 @@
             [closh.zero.env :refer [*closh-environment-init*]]
             [closh.zero.reader]
             [closh.zero.platform.process :refer [process?]]
-            [closh.zero.frontend.clojure-main-repl]
+            [closh.zero.frontend.main]
             [closh.zero.service.completion :refer [complete-shell]])
   (:import [org.jline.reader Completer ParsedLine LineReader]))
 
@@ -27,7 +27,7 @@
    (fn [s] (clojure.lang.LineNumberingPushbackReader.
             (java.io.StringReader. s)))
    core/has-remaining?
-   closh.zero.frontend.clojure-main-repl/repl-read))
+   closh.zero.frontend.main/repl-read))
 
 (defn repl-print
   [& args]
