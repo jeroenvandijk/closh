@@ -76,7 +76,10 @@
   `(let [thread# (Thread/currentThread)]
      (clojure.repl/set-break-handler! (fn [signal#] (.stop thread#)))))
 
+(println "Compile time version " (clojure-version))
+
 (defn -main []
+  (println "Clojure version " (clojure-version))
   (core/ensure-terminal
     (core/with-line-reader
       (doto
