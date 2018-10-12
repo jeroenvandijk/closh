@@ -1,7 +1,6 @@
 {:deps
- {org.clojure/clojure {:mvn/version "1.8.0"}
-  clojure-future-spec {:mvn/version "1.9.0-beta4"}
-  
+ {org.clojure/clojure {:mvn/version "1.10.0-RC1"}
+ 
   org.clojure/tools.reader
     {:git/url "https://github.com/dundalek/tools.reader"
      :sha "64a792b8ab6f774cab01c64d143c306ea81c84ff"
@@ -22,7 +21,7 @@
   compliment {:mvn/version "0.3.6"}
   cljfmt {:mvn/version "0.5.7" :exclusions [org.clojure/tools.reader]}
 
-  ; rebel-readline -> cljfmt -> rewrite-cljs,rewrite-clj
+  ; rebel-readline -> cljfmt -> rewrite-cljs,rewr ite-clj
   rewrite-cljs  {:mvn/version "0.4.3"  :exclusions [org.clojure/tools.reader]}
   rewrite-clj {:mvn/version  "0.5.2" :exclusions [org.clojure/tools.reader]}}
 
